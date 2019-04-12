@@ -1,20 +1,8 @@
-    // Utilisation du getElementsByClassName pour ciblé la classe voulue
-    // getElementsByClassName crée une liste de noeud contenant tout les éléments color (ici 3, allant de 0 à 2)
-    // Ici on cible le premier élément color (correspondant au vert)
-document.getElementsByClassName ('color')[0].addEventListener('click', function()
-{
-    // Puis on change l'attribut color du text
-    document.getElementById('text').style.color='green';
-});
-    // Ici on cible le deuxième élément color (correspondant au rouge)
-    document.getElementsByClassName ('color')[1].addEventListener('click', function()
-{
-        // Puis on change l'attribut color du text
-    document.getElementById('text').style.color='red';
-}); 
-    // Ici on cible le deuxième élément color (correspondant au bleu)
-document.getElementsByClassName ('color')[2].addEventListener('click', function()
-{
-    // Puis on change l'attribut color du text
-    document.getElementById('text').style.color='blue';
-});
+// je stocke mes boutons dans le tableau "buttons"
+var buttons=document.getElementsByClassName('color');
+//le bouton 1 change le texte en vert
+buttons[0].addEventListener('click',function(){document.getElementById('text').style.color="green"});
+//le bouton 2 change le texte en rouge
+buttons[1].addEventListener('click',function(){document.getElementById('text').style.color="red"});
+//le bouton 3 change le texte en bleu
+buttons[2].addEventListener('click',function(){document.getElementById('text').style.color="blue"});
